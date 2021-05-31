@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /*
+      Web Browser의 화면은
+      width는 보여지는 영역으로 일정한 크기를 갖는다
+      다만 height는 스크롤 기능이 있어서 일정한 크기가 설정되어 있지 않다
+      box의 width를 설정하면 원하는 폭 만큼의 box를 만들수 있다
+      하지만 height는 %로 지정할때 기준이 되는 높이가 없어서 원하는 크기만큼 못 만든다
+      그래서 초기에 html 전체의 높이는 지정해주고 그리고 이후에 다른 tag의 높이를 %로 지정 가능하다
+
+      현재 화면에서
+      화면을 가득채우는 layout을 설정하기 위해 html의 height를 100%로 설정했다
+      */
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+      }
+      header {
+        background-color: aquamarine;
+        color: mintcream;
+        padding: 2rem;
+        text-shadow: 2px 2px 2px pink;
+        text-align: center;
+      }
+
+      nav {
+        background-color: rgb(87, 226, 180);
+        color: mintcream;
+      }
+      nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+      nav li {
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+      nav li:hover {
+        background-color: pink;
+        color: white;
+      }
+
+      nav li:first-child:hover {
+        background-color: aqua;
+      }
+      /*flex 요소로서 여기서 부터 오른쪽 정렬하기*/
+      nav li:nth-child(4) {
+        margin-left: auto;
+      }
+      section {
+        height: 90%;
+        display: flex;
+      }
+      aside {
+        width: 20%;
+        background-color: rgb(214, 251, 243);
+      }
+      article {
+        width: 60%;
+        overflow: auto;
+      }
+      footer {
+        background-color: rgb(87, 226, 180);
+        color: mintcream;
+        padding: 0.5rem;
+      }
+      address {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My HOME</h1>
+      <p>My HOME page 방문, 환영 못해</p>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>내 소개</li>
+        <li>방명록</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+    <section>
+      <aside>Left</aside>
+      <article>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+        <p>모두들 문과여도 안죄송한 이세계로 감 읽어주세요!!!</p>
+      </article>
+      <aside>right</aside>
+    </section>
+    <footer>
+      <address>CopyRight &copy; aipro0124@naver.com</address>
+    </footer>
+  </body>
+</html>

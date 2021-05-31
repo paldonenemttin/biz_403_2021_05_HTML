@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 2px solid powderblue;
+        /*
+        table collapse를 seperate로 설정하고 spacing을 설정하면
+        표의 cell과 cell의 간격을 설정 할 수 있다
+         */
+        border-collapse: separate;
+        border-spacing: 5px;
+        width: 60%;
+        margin: 0px auto;
+      }
+      th,
+      td {
+        border: 2px solid aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <cal width="15%" />
+        <cal width="15%" />
+        <cal width="55%" />
+        <cal width="15%" />
+      </colgroup>
+      <caption>
+        학생정보
+      </caption>
+      <thead>
+        <!-- tr*(갯수)>td*(갯수)-->
+        <tr>
+          <th scope="low">학번</th>
+          <th scope="low">주소</th>
+          <th scope="low">이름</th>
+          <th scope="low">전화번호</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>남극</td>
+          <td>뽀로로</td>
+          <td>03210505</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>한국</td>
+          <td>김독자</td>
+          <td>01055555</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>웹접근성과 table</h3>
+    <p>table thead 영역의 tag에 scope지정</p>
+    <p>scope="col",scope="row"를 지정할 수 있다</p>
+    <p>scope="col" 위에서 아래로 읽기</p>
+    <p>scope="row" 왼쪽에서 오른쪽으로 읽기</p>
+  </body>
+</html>
