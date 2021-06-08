@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>span tag</title>
+    <style>
+      /*
+        문장내에 있는 일부의 text에 style을 지정하고자 할때 주로 사용하는tag
+        span tag
+        */
+      span {
+        font-weight: bold;
+        border: 2px solid aquamarine;
+      }
+      span.box {
+        display: inline-block;
+        width: 200px;
+        border: 2px solid aquamarine;
+      }
+      span.hidden {
+        visibility: hidden;
+        width: 0vh;
+        transition: 1s;
+      }
+      p.visi:hover span.hidden {
+        visibility: visible;
+        width: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <p>지옥<span>불반도</span></p>
+    <p>지옥<span class="box">불반도</span>skan</p>
+    <p class="visi">지옥<span class="hidden">불반도</span>skan</p>
+
+    <p>지옥<b>불반도</b></p>
+    <p>지옥<strong>불반도</strong></p>
+    <p>지옥<em>불반도</em></p>
+    <p>지옥<del>불반도</del></p>
+    <p>지옥<small>불반도</small></p>
+    <p>지옥<ins>불반도</ins></p>
+    <p>지옥<span>불반도</span><sup>s</sup></p>
+    <p>지옥<span>불반도</span><sub>s</sub></p>
+    <p>지옥<mark>불반도</mark></p>
+  </body>
+</html>
