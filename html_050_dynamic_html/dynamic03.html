@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 80%;
+        margin: 10%;
+      }
+      table td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    // 이차원 배열[][]
+    const datas = [
+      ["이름", "전화번호", "주소"],
+      ["홍길동", "010", "장성시"],
+      ["홍길동", "020", "서울시"],
+      ["홍길동", "030", "서울시"],
+    ];
+
+    let table = document.createElement("table");
+    for (let i = 0; i < datas.length; i++) {
+      let tr = document.createElement("tr");
+      for (let j = 0; j < datas[i].length; j++) {
+        let td = document.createElement("td");
+        td.innerHTML = datas[i][j]; // 데이터 i의 j
+        tr.appendChild("td");
+      }
+      table.appendChild("tr");
+    }
+    document.querySelector("body").appendChild("table");
+  </script>
+</html>

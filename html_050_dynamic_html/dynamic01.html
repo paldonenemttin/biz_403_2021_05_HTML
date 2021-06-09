@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic html</title>
+    <style>
+      div {
+        border: 2px solid maroon;
+        font-size: 40px;
+        width: 50%;
+        margin: 10px auto;
+      }
+      table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border: 2px solid red;
+      }
+      table td {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const doc = document;
+    let body = document.querySelector("body");
+    // div box tag를 생성하겠다
+    let div = document.createElement("div");
+    // 생선된 box안에 텍스트를 추가하겠다
+    div.innerHTML = "지옥불반도";
+    // 만들어진 div를 body에 child로 추가하라
+    body.appendChild(div);
+
+    let cell = doc.createElement("td");
+    let row = doc.createElement("tr");
+    let table = doc.createElement("table");
+
+    let cell1 = doc.createElement("td");
+    cell1.innerHTML = "첫번째";
+    row.appendChild(cell1);
+
+    let cell2 = doc.createElement("td");
+    cell2.innerHTML = "두번째";
+    row.appendChild(cell2);
+
+    let cell3 = doc.createElement("td");
+    cell3.innerHTML = "세번째";
+    row.appendChild(cell3);
+
+    table.appendChild(row);
+
+    body.appendChild(table);
+  </script>
+</html>
