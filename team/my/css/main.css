@@ -1,0 +1,47 @@
+nav#up_menu {
+  /* 화면의 특정한 위치에 강제 고정하기 */
+  /* top, left, bottom, right 를 이용하여 고정할수 있다 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lavender;
+  display: flex;
+}
+
+nav#up_menu h1 {
+  color: violet;
+  font-size: 40px;
+  font-weight: 900;
+  padding: 12px 5px 5px 20px;
+}
+
+nav#up_menu div {
+  margin-left: auto;
+}
+
+nav#up_menu ul {
+  /* 
+        container를 flex로 하고 child의
+        margin-left :auto로 설정하면
+        flex box내에서 오른쪽 정렬이 된다
+      */
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  color: white;
+}
+
+nav#up_menu li {
+  padding: 22px 15px 20px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+nav#up_menu div.ham_bar {
+  width: 100%;
+  padding: 22px;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
