@@ -6,43 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스타벅스</title>
     <script
-      src="https://kit.fontawesome.com/7f8ef4d19e.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin-left: 0;
-        padding: 0;
-        transition: 1s;
+    src="https://kit.fontawesome.com/7f8ef4d19e.js"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin-left: 0;
+      padding: 0;
+      transition: 1s;
+    }
+    header{
+      background-color: white;
+        width: 80%;
+      margin: 0 auto;
+    } 
+    hr {
+          width: 80%;
+      margin: 0 auto;
       }
-
-      h1 {
-        color: rgb(66, 41, 41);
-        font-size: 30px;
-        margin-left: 50px;
-      }
-
-      li {
-        list-style: none;
-      }
-    </style>
-    <script src="js/main_nav.js"></script>
-  </head>
-  <body>
-      <h1>starbucks cuctum</h1>
+    h1 {
+      color: rgb(66, 41, 41);
+      font-size: 25px;
+      margin-left: 50px;
+    }
+    a{
+      text-decoration-line:none;
+    }
+    li.head {
+      font-size: 10px;
+    }
+    li#head1 {
+      list-style: none;
+    }
+    li#head2 {
+      list-style: none;
+    }
+    div#ham_bar{
+      background-color: rgb(0, 138, 69);
+    }
+    h1, li#head, div.ham_bar, .menu_con, #head {
+      display: inline-block;
+    }
+    #head{
+          position: absolute;
+          right: 0px;
+    }
+  </style>
+  <script src="js/main_nav.js"></script>
+</head>
+<body>
+  <header>
+    
       <div class="menu_con">
-        <div type="button" class="ham_bar"><i class="fas fa-bars"></i></div>
-        <div>
-      <hr></hr>
-      
-        <ul>
-          <li id="m1" class="me"><a href="input.html">커스텀 메뉴 추가</a></li>
-          <li id="m2" class="me"><a href="notice.html">게시판</a></li>
-          <li id="m3" class="me"><a href="att.html">공지사항</a></li>
-          <li id="m4" class="me"><a href="help.html">?</a></li>
-        </ul>
+        <div class="ham_bar"><i class="fas fa-bars"></i>
       </div>
-      </div>
-  </body>
+      <a href="index.html"><h1>starbucks custum</h1></a>
+      <ul class="head">
+        <li id="head1">로그인</li>
+        <li id="head2">회원가입</li>
+      </ul>
+  </header>
+
+  <hr></hr>
+  <div>
+      <ul id="menu">
+        <li id="m1" class="me"><a href="input.html">커스텀 메뉴 추가</a></li>
+        <li id="m2" class="me"><a href="notice.html">게시판</a></li>
+        <li id="m3" class="me"><a href="att.html">공지사항</a></li>
+        <li id="m4" class="me"><a href="help.html">HELP</a></li>
+      </ul>
+    </div>
+    </div>
+</body>
 </html>

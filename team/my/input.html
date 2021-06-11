@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      p#nit {
+        font-size: 5px;
+      }
+      h3 {
+        padding-left: 20%;
+      }
+      div#input {
+        padding-left: 30%;
+      }
+      form#image {
+        font-size: 10px;
+      }
+      input {
+        padding-left: 50%;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/7f8ef4d19e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div data-include-path="index.html"></div>
+
+    <script>
+      window.addEventListener("load", function () {
+        var allElements = document.getElementsByTagName("*");
+        Array.prototype.forEach.call(allElements, function (el) {
+          var includePath = el.dataset.includePath;
+          if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                el.outerHTML = this.responseText;
+              }
+            };
+            xhttp.open("GET", includePath, true);
+            xhttp.send();
+          }
+        });
+      });
+    </script>
+    <h3>커스텀메뉴 추가</h3>
+    <div id="input">
+      <label for="title">제목:</label>
+      <input type="text" value="제목을 입력하세요" />
+      <div class="textarea">
+        <p id="nit">내용을 입력하세요</p>
+        <textarea id="meme" name="recip" rows="10" cols="50">
+ex)아무거나</textarea
+        >
+      </div>
+    </div>
+  </body>
+  <!--파일 업로드-->
+  <form id="image">
+    <input type="file" name="fileupload" accept="image/*" />
+  </form>
 </html>
