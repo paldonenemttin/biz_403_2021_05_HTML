@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h3></h3>
+    <div>
+        <table>
+        <tr>
+        <th>제목</th>
+        <td>${st_title}</td>
+        <hr></hr>
+        <th>작성시각</th>
+        <td>${st_time}</td>
+        <th>작성일</th>
+        <td>${st_date}</td>
+        </tr>
+        <tr>
+            <th>작성자</th>
+            <td>${st_writer}</td>
+            <th>E-mail</th>
+            <td>${st_email}</td>
+        </tr>
+        <tr>
+            <td>${CS.st_content}</td>
+            <td>${CS.st_image}</td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
