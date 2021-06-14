@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        hr{
-            width: 50%;
-        }
+      hr {
+        width: 50%;
+      }
+      table th,
+      td {
+        border: 1px solid #aaa;
+        padding: 3px 5px;
+        height: 10px;
+        font-size: 12px;
+      }
     </style>
-</head>
-<body>
-    <h3></h3>
-    <div>
+  </head>
+  <body>
+    <div class="view_cont">
+      <div id="view_tit">
+        <h3>제목</h3>
+      </div>
+      <div id="#">
         <table>
-        <tr>
-        <th>제목</th>
-        <td>${st_title}</td>
-        <hr></hr>
-        <th>작성시각</th>
-        <td>${st_time}</td>
-        <th>작성일</th>
-        <td>${st_date}</td>
-        </tr>
-        <tr>
-            <th>작성자</th>
-            <td>${st_writer}</td>
-            <th>E-mail</th>
-            <td>${st_email}</td>
-        </tr>
-        <tr>
-            <td>${CS.st_content}</td>
-            <td>${CS.st_image}</td>
-        </tr>
+          <tr>
+            <th id="avo">추천수</th>
+            <th id="author">작성자</th>
+            <th id="date">작성일자</th>
+            <th id="time">작성시간</th>
+          </tr>
+          <tr>
+            <td id="avo">1</td>
+            <td id="author">2</td>
+            <td id="date">3</td>
+            <td id="time">4</td>
+          </tr>
+          <td>내용</td>
         </table>
+      </div>
+      <div class="btn_avo">
+        <button>☆추천☆</button>
+        <button>목록으로</button>
+      </div>
     </div>
-</body>
+  </body>
 </html>

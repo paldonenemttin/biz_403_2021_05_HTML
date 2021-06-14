@@ -12,7 +12,7 @@
     <style>
       h2{
         margin-top: 30px;
-        padding-left: 10%;
+        margin-left: 10%;
       }
       /* 검색창 */
       div.ser_title{
@@ -39,7 +39,7 @@
       }
       table th, td {
         border: 1px solid #aaa;
-        padding: 5px 8px;
+        padding: 3px 5px;
         height: 10px;
         font-size: 12px;
       }
@@ -48,25 +48,25 @@
         background-color: #F2F5F4;
         transition: background-color 0.2s;
       }
-      td{
+      th, td{
         text-align: center;
       }
-      th#au,td#au{
+      th#th_au,td#td_au{
         width:10px;
       }
-      th#date,td#date{
+      th#th_date,td#td_date{
         width: 10px;
       }
-      th#time,td#time{
+      th#th_time,td#td_time{
         width: 10px;
       }
-      th#title,th#title{
+      th#th_title,th#td_title{
         width: 100px;
       }
-      th#no,td#no{
+      th#th_no,td#td_no{
         width:10px;
       }
-      th#avo,td#avo{
+      th#th_avo,td#td_avo{
         width: 10px;
       }
       th:first-child, th:last-child, td:first-child, td:last-child{
@@ -76,7 +76,7 @@
       /* 버튼 */
       button {
         padding: 7px 20px;
-        background-color: green;
+        background-color: rgb(3, 102, 53);
         color: white;
         border: none;
         border-radius: 2px;
@@ -93,6 +93,7 @@
         font-size: 15px;
         transition: background-color 0.3s;
         cursor:pointer;
+        box-shadow: 1px 1px 1px gray;
       }
       button#write{
         margin-left: 80%;
@@ -103,7 +104,6 @@
          font-size: 12px;
          margin-left: 8px;
        }
-      
       
     </style>
     <h2>자유게시판</h3>
@@ -123,9 +123,9 @@
         <th id="date">작성일</th>
         <th id="time">작성시간</th>
       </tr>
-      <tr class="value">
+      <tr class="value" >
         <td id="no">1</td>
-        <td id="title">1</td>
+        <td id="title"><a href="view.html">1</a></td>
         <td id="avo">0</td>
         <td id="au">아무개</td>
         <td id="date">2021-06-11</td>
